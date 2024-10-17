@@ -17,18 +17,18 @@ args.dataset_path = 'datasets/fibroblast_datas.npy'
 
 
 # Choose model
-args.model = 'DiT'
-# args.model = 'WBDiT'
+# args.model = 'DiT'
+args.model = 'WBDiT'
 args.depth = 3     # number of DiTBlock
 
 
-args.epochs = 2400     # training epochs
+args.epochs = 3     # training epochs
 args.batch_size = 16     # batch size
 args.gene_size = 2000     # size of gene
 args.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 args.lr = 1e-4     # learning rate
 args.ckpt = False     # load checkpoint or not
 args.ckpt_epoch = 0     # if args.ckpt == True, choose which checkpoint to load
-args.save_every_epoch = 100     # save every n epoch
+args.save_every_epoch = 3     # save every n epoch
 
 

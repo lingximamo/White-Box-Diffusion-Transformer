@@ -44,18 +44,18 @@ def sample_batches(model, amount=1024, savepath=None, method='ddpm', sub_time_se
 if __name__ == '__main__':
     device = args.device
 
-    ckpt_path = 'ckpt/DiT/Gene_fibroblast/_epoch3_ckpt.pt'     # path of checkpoint
+    ckpt_path = 'ckpt/WBDiT/Gene_fibroblast/_epoch3_ckpt.pt'     # path of checkpoint
     number = 10     # number of generated samples
 
     method = 'ddim'     # use ddim or ddpm
     # method = 'ddpm'
 
     acc_rate = 10  # ddim accelerate rate
-    save = 'results/DiT/Gene_fibroblast_samples'  # savepath of result
+    save = 'results/WBDiT/Gene_fibroblast_samples'  # savepath of result
     nonnegative = True     # if dataset is non-negative, set True
 
-    model = DiT(depth=args.depth).to(device)     # choose model: DiT or WBDiT
-    # model = WBDiT(depth=args.depth).to(device)
+    model = WBDiT(depth=args.depth).to(device)     # choose model: DiT or WBDiT
+    # model = DiT(depth=args.depth).to(device)
 
     model.load_state_dict(torch.load(ckpt_path))
 
