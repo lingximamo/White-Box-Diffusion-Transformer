@@ -4,7 +4,7 @@
 -   Place your gene dataset (`.npy`  format) in the  `datasets/`  directory.
 -   Supported datasets:  `fibroblast_datas.npy`,  `malignant_datas.npy`, or  `immune_datas.npy`.
 -   Update  `settings.py`  to specify the dataset path and name.
--   The default dimension of cell genes is 1D arrays of length 2000 in `.npy` format. You can change the dimension of the cells by modifying the `gene_size` parameter in `settings.py`.
+-   The default dimension of cell gene is 1D arrays of length 2000 in `.npy` format. You can change the dimension of the cells by modifying the `gene_size` parameter in `settings.py`.
 
 ## Training
 
